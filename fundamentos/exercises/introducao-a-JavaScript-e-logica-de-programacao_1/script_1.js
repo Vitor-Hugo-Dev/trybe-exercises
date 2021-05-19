@@ -53,3 +53,16 @@ else if (test4 < 0){
 else{
     console.log("zero");
 }
+
+// ex5
+
+let h = 80;
+let i = 50;
+let j = 50;
+
+if (h + i + j === 180){
+    console.log(true);
+}
+else {
+    console.log(false);
+}
