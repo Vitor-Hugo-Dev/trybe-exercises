@@ -23,7 +23,33 @@ if (c > d) {
 else {
     console.log(d);
 }
+
 // ex3
 
 let e = 20;
-let f = 25; 
+let f = 25;
+let g = 30;
+
+if ( e > f && e > g){
+    console.log(e)
+}
+else if ( f > e && f > g){
+    console.log(f)
+}
+else{
+    console.log(g)
+}
+
+// ex4
+
+let test4 = 5;
+
+if(test4 > 0){
+    console.log("positive");
+}
+else if (test4 < 0){
+    console.log("negative");
+}
+else{
+    console.log("zero");
+}
