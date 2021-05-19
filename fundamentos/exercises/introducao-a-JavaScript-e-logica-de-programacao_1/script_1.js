@@ -11,3 +11,15 @@ let multiplicacao = a*b;
 let divisao = a/b;
 
 let modulo = a%b;
+
+// ex2
+
+let c = 10;
+let d = 15;
+
+if (c>d){
+    console.log(c);
+}
+else {
+    console.log(d);
+}
