@@ -72,3 +72,15 @@
 
 }
 // ex7
+{
+    let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+    let numMenor = 0;
+    for (let index = 0; index < numbers.length; index += 1) {
+        if ((numbers[index] < numMenor) || numMenor === 0) {
+            numMenor = numbers[index];
+        }
+
+    }
+    console.log(numMenor);
+}
+// ex8
