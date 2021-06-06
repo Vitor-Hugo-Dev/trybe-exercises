@@ -1,55 +1,77 @@
-// ex1-Acesse o elemento elementoOndeVoceEsta .
-let ondeVcEsta = document.querySelector("#elementoOndeVoceEsta");
+// EXERCÍCIOS PARTE I -BUSCANDO ELEMENTOS.
+//ex1- Acesse o elemento elementoOndeVoceEsta .
+//ex2- Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+//ex3- Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+//ex4- Acesse o primeiroFilho a partir de pai .
+//ex5- Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+//ex6- Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+//ex7- Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+//ex8- Agora acesse o terceiroFilho a partir de pai .
 
-// ex2-Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele
-let primeiroFDoF = (document.querySelector(
-  "#elementoOndeVoceEsta"
-).parentNode.style.color = "red");
+// ex1-
+let elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+console.log(elementoOndeVoceEsta);
+// ex2-
+let acessaElementoPai = elementoOndeVoceEsta.parentElement;
+console.log(acessaElementoPai);
+acessaElementoPai.style.color = "black";
+// ex3-
+let primeiroFilho = document.getElementById("primeiroFilho");
+primeiroFilho.innerText = "Revisão de conteúdo";
+console.log(primeiroFilho);
+// ex4-
+let acessaDePai = document.getElementById("pai");
+acessaDePai.children[0];
+console.log(acessaDePai.children[0]);
+// ex5-
+let acessaDeElementoOndeVoceEsta = elementoOndeVoceEsta.previousElementSibling;
+console.log(acessaDeElementoOndeVoceEsta);
+// ex6-
+let acessaAtencao = elementoOndeVoceEsta.nextSibling;
+console.log(acessaAtencao);
+// ex7-
+let acessaTerceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+console.log(acessaTerceiroFilho);
+// ex8-
+let acessaTerceiroFilhoDePai =
+  acessaDePai.lastElementChild.previousElementSibling;
+console.log(acessaTerceiroFilhoDePai);
 
-// ex3-Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-let primeiroF = (document.querySelector("#primeiroFilhoDoFilho").innerText =
-  "exercicio do conteudo");
+// EXERCÍCIOS PARTE II - CRIANDO ELEMENTOS.
 
-// ex4-Acesse o primeiroFilho a partir de pai .
-let primeiroFPai = document.querySelector("#pai").firstChild;
+//EX1- Crie um irmão para elementoOndeVoceEsta .
+//EX2- Crie um filho para elementoOndeVoceEsta .
+//EX3- Crie um filho para primeiroFilhoDoFilho .
+//EX4- A partir desse filho criado, acesse terceiroFilho .
 
-// ex5-Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-let primeiroFOndeVcEsta = document.querySelector(
-  "#elementoOndeVoceEsta"
-).previousElementSibling;
+// ex1-
+let criaIrmao = elementoOndeVoceEsta.parentElement;
+let irmao = document.createElement("div");
+irmao.innerText = "Novo Irmão.";
+criaIrmao.appendChild(irmao);
 
-// ex6- Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
-let textAtencao = document.querySelector("#elementoOndeVoceEsta").nextSibling;
+// ex2-
+let criaFilho = elementoOndeVoceEsta;
+let filho = document.createElement("h1");
+filho.innerText = "VAI FILHÃO!!!!";
+criaFilho.appendChild(filho);
 
-// ex7- Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
-let terceiroFilho = document.querySelector(
-  "#elementoOndeVoceEsta"
-).nextElementSibling;
+// ex3-
+let criaFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
+let filhoFilhoDoFilho = document.createElement("h2");
+filhoFilhoDoFilho.innerText = "VAI FILHÃO DO FILHÃO!!";
+criaFilhoDoFilho.appendChild(filhoFilhoDoFilho);
 
-// ex8- Agora acesse o terceiroFilho a partir de pai .
-let terceiroFilhoPai = document.querySelector("#pai").childNodes[5];
+// ex4-
+let acessaTerceiroFilhoDeNovo = document.getElementById(
+  "primeiroFilhoDoFilho"
+).firstChild;
+acessaTerceiroFilhoDeNovo.parentElement.parentElement.nextElementSibling;
 
-// ex2.1- Crie um irmão para elementoOndeVoceEsta .
-let elementoOVE = document.querySelector("#elementoOndeVoceEsta").parentNode;
-let elementNewBrother = document.createElement("div");
-elementNewBrother.innerText = "assunto complicado da P#$%% !!!";
-elementoOVE.appendChild(elementNewBrother);
+// EXERCÍCIOS PARTE III - REMOVENDO ELEMENTOS
 
-// ex2.2- Crie um filho para elementoOndeVoceEsta
-let elementoOVE2 = document.querySelector("#elementoOndeVoceEsta");
-let elementChild = document.createElement('div');
-elementChild.innerText = " assunto complicado da P#$%%2 !!!";
-elementoOVE2.appendChild(elementChild);
-
-// ex2.3- Crie um filho para `primeiroFilhoDoFilho
-let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
-let filhoPrimeiroFilhoDoFilho = document.createElement('div');
-filhoPrimeiroFilhoDoFilho.innerText = " assunto complicado da P#$%%3 !!!" + " AGORA MAIS DIFÍCIL";
-primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
-
-// ex2.4- A partir desse filho criado, acesse `terceiroFilho`.
-let terceiroFilho2 = filhoPrimeiroFilhoDoFilho.parentNode.parentNode.nextElementSibling;
-console.log(terceiroFilho2);
-
-// ex3.1- Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
-let removeItens = document.getElementById('pai');
+// ex1- Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+acessaDePai.removeChild(document.getElementById('terceiroFilho'));
+acessaDePai.removeChild(document.getElementById('quartoEUltimoFilho'));
+acessaDePai.removeChild(acessaDePai.children[2]);
+acessaDePai.removeChild(acessaDePai.childNodes[4]);
