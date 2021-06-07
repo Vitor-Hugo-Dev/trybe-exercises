@@ -23,7 +23,7 @@ input.addEventListener('input', mudarTexto);
 // ex4
 function redireciona (event){
     let newPage = document.getElementById("mySpotrybefy");
-    newPage.innerHTML = window.location.replace('https://vitor-hugo-dev.github.io/');
+    newPage.innerHTML = window.location.href = 'https://vitor-hugo-dev.github.io/';
 }
  myWebpage.addEventListener('dblclick',redireciona );
 
