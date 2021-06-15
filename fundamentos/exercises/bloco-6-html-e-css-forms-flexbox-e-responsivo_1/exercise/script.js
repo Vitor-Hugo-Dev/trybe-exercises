@@ -34,14 +34,30 @@ for (let index in estadosBR) {
   pegaSelected.appendChild(criaOption);
 }
 
-function interromper (event){
-    event.target.proventDefault()
+function interromper(event) {
+  console.log("teste");
+  event.proventDefault();
 }
-document.getElementById('enviar').addEventListener('click', interromper);
 
+const botao= document.getElementById("enviar");
 
-
+botao.addEventListener("submit", interromper);
 
 // if(document.getElementById('date').value === ""){
 //     alert("você precisa inserir uma data valida!")
 // }
+
+let divInfos = document.createElement("div");
+
+
+// ex4
+ const limpar = document.getElementById("limpar");
+
+ const pegaDivs = document.getElementsByTagName("div");
+
+ for (let index = 0; index < pegaDivs.length; index += 1 ){
+   let filhoDiv = pegaDivs[index];
+   for ( let index2 = 0; index2 < filhoDiv.length; index += 1 ){
+
+   }
+ }
