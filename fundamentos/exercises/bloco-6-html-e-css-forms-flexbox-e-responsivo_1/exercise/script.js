@@ -34,14 +34,14 @@ for (let index in estadosBR) {
   pegaSelected.appendChild(criaOption);
 }
 
+
+const botao = document.getElementById("enviar");
 function interromper(event) {
   console.log("teste");
-  event.proventDefault();
+  event.preventDefault();
 }
 
-const botao= document.getElementById("enviar");
-
-botao.addEventListener("submit", interromper);
+botao.addEventListener("click", interromper);
 
 // if(document.getElementById('date').value === ""){
 //     alert("você precisa inserir uma data valida!")
@@ -49,15 +49,6 @@ botao.addEventListener("submit", interromper);
 
 let divInfos = document.createElement("div");
 
-
 // ex4
- const limpar = document.getElementById("limpar");
-
- const pegaDivs = document.getElementsByTagName("div");
-
- for (let index = 0; index < pegaDivs.length; index += 1 ){
-   let filhoDiv = pegaDivs[index];
-   for ( let index2 = 0; index2 < filhoDiv.length; index += 1 ){
-
-   }
- }
+const limpar = document.getElementById("limpar");
+const pegaDivs = document.getElementsByTagName("div");

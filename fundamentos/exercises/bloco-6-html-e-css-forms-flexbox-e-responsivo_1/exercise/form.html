@@ -26,23 +26,27 @@
             </div>
             <div>
                 <label for="cpf">CPF:</label>
-                <input type="number" name="cpf" maxlength="11" required placeholder="11111111111">
+                <input type="number" name="cpf" maxlength="11" id="cpf" required placeholder="11111111111">
             </div>
             <div>
                 <label for="address">Endereço:</label>
-                <input type="text" name="address" placeholder="Digite seu endereço aqui" maxlength="200" required>
+                <input type="text" name="address" id="address" placeholder="Digite seu endereço aqui" maxlength="200"
+                    required>
             </div>
-            <div><label for="botao">Casa</label>
-                <input type="radio" name="botao" id='botao' required>
+            <div>
+                <label for="botao-radio">Casa</label>
+                <input type="radio" name="botao" id='botao-radio' required>
             </div>
-            <div> <label for="botao2">Apartamento</label>
-                <input type="radio" name="botao" id="botao2">
+            <div>
+                <label for="botao2-radio">Apartamento</label>
+                <input type="radio" name="botao" id="botao2-radio">
             </div>
             <div>
                 <label for="city">Cidade:</label>
-                <input type="text" name="city" placeholder="Digite sua Cidade" maxlength="28" required>
+                <input type="text" name="city" id="city" placeholder="Digite sua Cidade" maxlength="28" required>
             </div>
-            <div> <label for="state">Estado:</label>
+            <div>
+                <label for="state-of-people">Estado:</label>
                 <select name="state" id="state-of-people"></select>
             </div>
 
@@ -67,8 +71,8 @@
                 <input type="date" name="data" id="date" required>
             </div>
         </fieldset>
-       <button type="submit" id="enviar">Enviar</button>
-       <button type="reset" id="limpar">Limpar</button>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset" id="limpar">Limpar</button>
     </form>
     <script src="script.js"></script>
 </body>
