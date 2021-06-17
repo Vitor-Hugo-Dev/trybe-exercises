@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bloco6.1
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><b> Formulário de cadastro de currículo</b></h1>
+    </header>
+    <form action="" method="GET" id="form">
+        <fieldset>
+            <div>
+                <label for="name-of-people">Nome:</label>
+                <input type="text" name="nome" id="name-of-people" maxlength="40" required
+                    placeholder="Digite seu nome aqui">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" required maxlength="50" name="email" placeholder="Digite seu Email aqui"
+                    id="email-of-people">
+            </div>
+            <div>
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" maxlength="11" id="cpf" required placeholder="11111111111">
+            </div>
+            <div>
+                <label for="address">Endereço:</label>
+                <input type="text" name="address" id="address" placeholder="Digite seu endereço aqui" maxlength="200"
+                    required>
+            </div>
+            <div>
+                <label for="botao-radio">Casa</label>
+                <input type="radio" name="botao" id='botao-radio' required>
+            </div>
+            <div>
+                <label for="botao2-radio">Apartamento</label>
+                <input type="radio" name="botao" id="botao2-radio">
+            </div>
+            <div>
+                <label for="city">Cidade:</label>
+                <input type="text" name="city" id="city" placeholder="Digite sua Cidade" maxlength="28" required>
+            </div>
+            <div>
+                <label for="state-of-people">Estado:</label>
+                <select name="state" id="state-of-people"></select>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <div>
+                <label for="curriculo-resumo">Resumo do currículo</label>
+                <textarea name="resumo" id="curriculo-resumo" cols="50" rows="10" maxlength="1000" required
+                    placeholder="Digite aqui"></textarea>
+            </div>
+            <div>
+                <label for="cargo">Cargo:</label>
+                <input type="text" name="cargo" id="cargo" maxlength="40" required placeholder="Digite aqui">
+            </div>
+            <div>
+                <label for="description">Descrição do cargo:</label>
+                <textarea name="description" id="description" cols="50" rows="10" maxlength="500"
+                    placeholder="Digite aqui" required></textarea>
+            </div>
+            <div>
+                <label for="date">Data de inicio:</label>
+                <input type="date" name="data" id="date" required>
+            </div>
+        </fieldset>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset" id="limpar">Limpar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
