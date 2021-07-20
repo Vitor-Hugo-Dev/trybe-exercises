@@ -1,8 +1,8 @@
 {
-  "name": "jest",
+  "name": "exercise",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "exercise1.js",
   "scripts": {
     "test": "jest"
   },
