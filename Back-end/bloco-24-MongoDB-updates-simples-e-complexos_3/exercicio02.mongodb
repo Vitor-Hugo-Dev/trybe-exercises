@@ -1,0 +1,16 @@
+use('dbAulas');
+
+db.movies.find({
+  $and: [
+    {
+      category: {
+        $elemMatch: { $in: ['action'] },
+      },
+    },
+    {
+      imdbRating: {
+        $gt: 7,
+      },
+    },
+  ],
+});

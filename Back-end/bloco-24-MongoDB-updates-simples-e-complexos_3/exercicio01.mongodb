@@ -1,0 +1,5 @@
+use('dbAulas');
+
+db.movies.find({
+  category: { $all: ['adventure', 'action'] },
+});
